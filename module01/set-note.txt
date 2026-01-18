@@ -1,0 +1,5 @@
+1. If we want to use Set. we must use new key words. like: const set = new Set()
+
+2. Set never stores duplicates.
+
+3. In Set no array methods work, only forEach work. But forEach doesn't return an array. so it's a problem. forEach only return the elements.
