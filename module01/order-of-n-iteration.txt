@@ -1,0 +1,7 @@
+1. When we have iterate over an array then Order of N happen. That's mean in order of n every element must be iterated. - O(n) - for loop, forEach.
+
+2. push/pop: We don't need to iterate in push/pop. So , this is order of O(1). It doesn't matter how much elements is there we don't need to iterate. This will take only a constant time. - O(1)
+
+3. shift/unshift: O(n)
+
+4. array.includes/array.find: O(n)

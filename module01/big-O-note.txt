@@ -1,0 +1,66 @@
+BIG-O NOTATION IN JAVASCRIPT SCENARIO:
+
+for(n){
+    think this block as - n
+}
+Now, we have an array of numbers [1,2,3,4,5]. n - means number of elements. if we increase the number of element, execution time will also increase. if we decrease the number of element, execution time will also decrease. So, this O(n) - order of notation
+
+When we will understand O(n) is happening?
+===========================================
+Let's think about a worst case scenario.
+
+take an array of numbers: [2,(4),6,8,10]
+we need to find 4. so the loop will go through array and it will find 4 in the second place. the loop will end immediately.
+
+But what will happened when that number is at the end of the array: [2,6,8,10,(4)]. the loop will check on every element and then it will find the number at the end.
+- When we need to go through on every element, this called Order of N or O(n).
+
+When will happen O(n2)?
+======================
+Order n2 will happened that time when we have nested loop or function. [Jokhon nested kichu thakbe tokhon O(n2) hobe.]
+
+function printAllPairs(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      console.log(arr[i], arr[j]);
+    }
+  }
+}
+
+first arr: [1,2,3,4]
+second arr: [5,6,7,8]
+
+When the 4 elements of the first array are iterated, the elements of the second array are also iterated for each element of the first array.
+So, for each of the 4 elements in the first array, the 4 elements of the second array run 4 times.
+
+
+Explanation:
+- Outer loop runs n times
+- Inner loop runs n times for each outer loop
+- Total operations = n × n = n²
+- Time complexity = O(n²)
+
+When will happen O(1)?
+======================
+The algorithm takes the same amount of time, no matter how the input size is. it's 10 or 10 million.
+
+Example: 
+let arr = [10, 20, 30, 40, 50];
+console.log(arr[2]); // 30
+
+Explanation:
+- Accessing arr[2] takes one direct step
+- It does not depend on array size
+- Time Complexity = O(1)
+- now matter how big the array size. it only return the element of index 2.
+
+let user = {
+  name: "Asif",
+  age: 24
+};
+console.log(user.name);
+
+Explanation:
+- Access by key
+- Average time is constant
+- Time Complexity = O(1)
